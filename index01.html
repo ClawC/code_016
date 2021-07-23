@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-In</title>
+</head>
+<body>
+    <div class="container-01">
+    <p class="line-1 anim-typewriter">Welcome CODE-016 ( ).....!!!</p>
+    </div>
+    <div class="container">
+        <div class="main">
+            <h2>LoginToAccess( )</h2>
+            <form id="form_id" method="post" name="myform" style="margin-top:2rem;">
+                <label>User Name :</label>
+                <input type="text" name="username" id="username" />
+                <label>PassPhrase :</label>
+                <input type="password" name="password" id="password" />
+                <input type="button" value="Login" id="submit" onclick="validate()" />
+            </form>
+        </div>
+    </div>
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Raleway);
+    /* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+body{
+  height: calc(100vh - 8em);
+  padding: 4em;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: 'Anonymous Pro', monospace;  
+}
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 16em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0, 0, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
+    h2{
+    background-color: #031742;
+    color:gold;
+    padding: 30px 35px;
+    margin: -10px -50px;
+    text-align:center;
+    border-radius: 10px 10px 0 0;
+    }
+    hr{
+    margin: 10px -50px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 40px;
+    }
+    div.container{
+    width: 900px;
+    height: 610px;
+    margin:35px auto;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 35%;
+    padding-top: 5%;
+    }
+    div.main{
+    width: 300px;
+    padding: 10px 50px 25px;
+    border: 1px solid rgb(51, 50, 50);
+    border-radius: 10px;
+    font-family: raleway;
+    float:left;
+    margin-top:50px;
+    }
+    input[type=text],input[type=password]{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    color: #4f4f4f;
+    font-size: 16px;
+    border-radius: 5px;
+    }
+    label{
+    color: #464646;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 14px;
+    font-weight: bold;
+    }
+    center{
+    font-size:32px;
+    }
+    .note{
+    color:red;
+    }
+    .valid{
+    color:green;
+    }
+    .back{
+    text-decoration: none;
+    border: 1px solid rgb(0, 143, 255);
+    background-color: rgb(0, 214, 255);
+    padding: 3px 20px;
+    border-radius: 2px;
+    color: black;
+    }
+    input[type=button]{
+    font-size: 16px;
+    background: linear-gradient(#06033a 5%, #100a81 100%);
+    border: 1px solid #e5a900;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0;
+    outline:none;
+    }
+    input[type=button]:hover{
+    background: linear-gradient(#0d0780 5%, #1b11d1 100%);
+    }
+    
+    </style>
+
+    <script>
+        var attempt = 5; // Variable to count number of attempts.
+            // Below function Executes on click of login button.
+            function validate() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                if (username == "CODE-NULL" && password == "malaciousPassword") {
+                    alert("Login successfully");
+                    window.location = "index.html"; // Redirecting to other page.
+                    return false;
+                }
+                else {
+                    attempt--;// Decrementing by one.
+                    alert("You have left " + attempt + " attempt;");
+                    // Disabling fields after 5 attempts.
+                    if (attempt == 0) {
+                        document.getElementById("username").disabled = true;
+                        document.getElementById("password").disabled = true;
+                        document.getElementById("submit").disabled = true;
+                        return false;
+                    }
+                }
+            }
+    </script>
+</body>
+</html>

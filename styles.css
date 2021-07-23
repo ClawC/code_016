@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+p{
+font-family: 'Bai Jamjuree', sans-serif;
+font-size: 18px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.navigator-01{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 4%;
+    height: 100%;
+    text-align: center;
+}
+.navigator-02{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ListItem{
+    position: relative;
+    align-items: center;
+}
+.fab{
+    width: x;
+}
+.logo:hover{
+    color: aliceblue;
+    transform: scale(2);
+}
+
+
+.img-responsive:hover{
+    animation: transitionOnClick 0.75s;
+}
+
+@keyframes transitionOnClick{
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);  
+    }
+}
+
+
+.pS {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 50px;
+    padding: 17% 17%;
+}
+.commonLogs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    padding: 20px;
+    display: none;
+}
+.img-responsive{
+    width: 80%;
+}
+
+.buttonToUnhide{
+    margin-left: 20%;
+    margin-right: 7%;
+}
+
+.btn-dark:hover{
+    background-color: #f9fafb;
+    color: black;
+    border: 0rem;
+}
+
+.btn-light:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 0rem;
+}
+.expnd_img{
+    width:110%;
+}
